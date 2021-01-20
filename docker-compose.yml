@@ -6,7 +6,7 @@ services:
     ports: 
       - 3000:3000
     build: 
-      context: ./node-js-restful-api-example/
+      context: ./node-js-restful-api/
       dockerfile: Dockerfile
   frontend:
     container_name: frontend
