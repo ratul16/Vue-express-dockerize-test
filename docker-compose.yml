@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  backend:
+    container_name: backend
+    ports: 
+      - 3000:3000
+    build: 
+      context: ./node-js-restful-api-example/
+      dockerfile: Dockerfile
+  frontend:
+    container_name: frontend
+    ports: 
+      - 3030:3030
+    build: 
+      context: ./patient-profile-monitoring-system/
+      dockerfile: Dockerfile
+    depends_on: 
+      - backend
